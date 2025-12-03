@@ -62,7 +62,7 @@ const Meditasi = () => {
         {/* Header dengan Controls */}
         <View className="bg-white shadow-md border-b-2 border-yellow-600 px-4 py-3">
             <View className="flex-row items-center justify-between mb-3">
-            <Text className="text-2xl font-bold text-yellow-700"><FontAwesome5 name="spa" size={20} color="#ca8a04" /> Meditasi Terpandu</Text>
+            <Text className="text-2xl font-bold text-yellow-700"><FontAwesome5 name="spa" size={20} color="#ca8a04" /> Meditasi Satipathana</Text>
             </View>
 
             <View className="flex-row items-center justify-center bg-yellow-100 px-3 py-2 rounded-full border border-yellow-300">

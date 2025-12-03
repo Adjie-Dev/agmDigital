@@ -32,7 +32,7 @@ const Dashboard = ({ setActiveSection }: DashboardProps) => {
       section: 'PujaSore'
     },
     {
-      title: 'Meditasi Terpandu',
+      title: 'Meditasi Satipathana',
       description: 'Berbagai teknik meditasi dengan panduan audio dan video',
       time: 'Kapan Saja',
       icon: 'spa',

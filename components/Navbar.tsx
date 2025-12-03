@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Animated, Dimensions, Image, Modal, StatusBar, Text, TouchableOpacity, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const { width } = Dimensions.get('window');
 const SIDEBAR_WIDTH = width * 0.75;
@@ -25,11 +25,12 @@ const Navbar: React.FC<NavbarProps> = ({
 
     const navItems = [
         { id: 'Dashboard', label: 'Beranda', icon: 'home', color: 'yellow' },
-        { id: 'PujaPagi', label: 'Puja Pagi', icon: 'white-balance-sunny', color: 'yellow' },
-        { id: 'PujaSore', label: 'Puja Sore', icon: 'moon-waning-crescent', color: 'orange' },
-        { id: 'Meditasi', label: 'Meditasi', icon: 'meditation', color: 'red' },
-        { id: 'Avamangala', label: 'Paritta Avamangala', icon: 'bookmark', color: 'yellow' },
-        { id: 'TentangKami', label: 'Tentang Kami', icon: 'information', color: 'yellow' },
+        { id: 'PujaPagi', label: 'Puja Pagi', icon: 'sun', color: 'yellow' },
+        { id: 'PujaSore', label: 'Puja Petang', icon: 'cloud-sun', color: 'orange' },
+        { id: 'Meditasi', label: 'Meditasi Satipathana', icon: 'spa', color: 'red' },
+        { id: 'Avamangala', label: 'Paritta Avamangala', icon: 'book', color: 'yellow' },
+        { id: 'PathamaPuja', label: 'Pathama Puja', icon: 'book-open', color: 'yellow' },
+        { id: 'TentangKami', label: 'Tentang Kami', icon: 'info-circle', color: 'yellow' },
     ];
 
     useEffect(() => {
@@ -125,8 +126,8 @@ const Navbar: React.FC<NavbarProps> = ({
                         activeOpacity={0.7}
                         style={{ minWidth: 40, minHeight: 40 }}
                     >
-                        <MaterialCommunityIcons 
-                            name={isMobileMenuOpen ? 'close' : 'menu'} 
+                        <FontAwesome5 
+                            name={isMobileMenuOpen ? 'times' : 'bars'} 
                             size={24} 
                             color="#854d0e" 
                         />
@@ -143,7 +144,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 statusBarTranslucent={true}
             >
                 <View className="flex-1">
-                    {/* Overlay - DIUBAH: opacity lebih gelap */}
+                    {/* Overlay */}
                     <Animated.View 
                         className="flex-1 bg-black"
                         style={{ 
@@ -182,7 +183,7 @@ const Navbar: React.FC<NavbarProps> = ({
                                     onPress={() => setIsMobileMenuOpen(false)}
                                     className="p-2 bg-yellow-100 rounded-full"
                                 >
-                                    <MaterialCommunityIcons name="close" size={20} color="#854d0e" />
+                                    <FontAwesome5 name="times" size={20} color="#854d0e" />
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -214,7 +215,7 @@ const Navbar: React.FC<NavbarProps> = ({
                                                     : 'bg-orange-200'
                                                 : 'bg-gray-100'
                                         }`}>
-                                            <MaterialCommunityIcons
+                                            <FontAwesome5
                                                 name={item.icon}
                                                 size={20}
                                                 color={colors.icon}

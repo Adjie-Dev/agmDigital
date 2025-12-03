@@ -5,6 +5,7 @@ import Avamaggala from './Avamangala';
 import Dashboard from './Dashboard';
 import HeroSection from './HeroSection';
 import Meditasi from './Meditasi';
+import PathamaPuja from './PathamaPuja';
 import PujapagiScreen from './PujaPagi';
 import Pujasore from './PujaSore';
 import TentangKami from './TentangKami';
@@ -51,6 +52,8 @@ const App: React.FC = () => {
         return <Meditasi />;
       case 'Avamangala':
         return <Avamaggala />
+        case 'PathamaPuja':
+        return <PathamaPuja />
       case 'TentangKami':
           return <TentangKami setActiveSection={setActiveSection} />;
       default:

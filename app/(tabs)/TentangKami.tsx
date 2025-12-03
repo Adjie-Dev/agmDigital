@@ -33,7 +33,7 @@ const TentangKami = ({ setActiveSection }: TentangKamiProps) => {
     <SafeAreaView className="flex-1 bg-amber-50">
       <StatusBar barStyle="dark-content" backgroundColor="#FFF8E7" />
 
-      {/* Header - DIUBAH: tema gold */}
+      {/* Header */}
       <View className="bg-white shadow-md border-b-2 border-yellow-600 px-4 py-3">
         <View className="flex-row items-center justify-between mb-3">
           <Text className="text-2xl font-bold text-yellow-700">ℹ️ Tentang Kami</Text>
@@ -46,7 +46,7 @@ const TentangKami = ({ setActiveSection }: TentangKamiProps) => {
       </View>
 
       <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
-        {/* Yayasan Info - DIUBAH: header burgundy */}
+        {/* Yayasan Info */}
         <View className="bg-white mx-4 my-4 rounded-xl shadow-md border-2 border-yellow-300">
           <View className="bg-red-900 p-4 rounded-t-xl">
             <View className="flex-row items-center">
@@ -100,7 +100,7 @@ const TentangKami = ({ setActiveSection }: TentangKamiProps) => {
           </View>
         </View>
 
-        {/* Misi Yayasan - DIUBAH: tema gold */}
+        {/* Misi Yayasan */}
         <View className="bg-white mx-4 mb-4 rounded-xl shadow-md border-2 border-yellow-300">
           <View className="bg-yellow-600 p-4 rounded-t-xl">
             <View className="flex-row items-center">
@@ -137,7 +137,7 @@ const TentangKami = ({ setActiveSection }: TentangKamiProps) => {
           </View>
         </View>
 
-        {/* Lembaga yang Dinaungi - DIUBAH: tema burgundy */}
+        {/* Lembaga yang Dinaungi */}
         <View className="bg-white mx-4 mb-4 rounded-xl shadow-md border-2 border-yellow-300">
           <View className="bg-red-800 p-4 rounded-t-xl">
             <View className="flex-row items-center">
@@ -148,21 +148,26 @@ const TentangKami = ({ setActiveSection }: TentangKamiProps) => {
             </View>
           </View>
           <View className="p-5 bg-amber-50">
-            <Text className="text-yellow-900 text-sm mb-4 leading-5 font-medium">
-              Yayasan Agga Jina Mitto menaungi empat lembaga keagamaan Buddha:
-            </Text>
             <View className="space-y-3">
               {[
                 { 
                   title: 'Wihara Tantular Sugata Wilwatikta',
-                  icon: 'home'
+                  icon: 'spa'
                 },
                 { 
                   title: 'Lembaga Pendidikan Pariyapunati Indonesia',
                   icon: 'graduation-cap'
                 },
                 { 
-                  title: 'Padepokan Meditasi Buddhayana',
+                  title: 'Padepokan Meditasi Buddhayana, Lorokan',
+                  icon: 'spa'
+                },
+                { 
+                  title: 'Buddhayana Center Bali',
+                  icon: 'spa'
+                },
+                { 
+                  title: 'Cetiya Amitabha, Bali',
                   icon: 'spa'
                 },
                 { 
@@ -187,7 +192,7 @@ const TentangKami = ({ setActiveSection }: TentangKamiProps) => {
           </View>
         </View>
 
-        {/* Tentang Aplikasi - DIUBAH: tema burgundy soft */}
+        {/* Tentang Aplikasi */}
         <View className="mx-4 mb-4 bg-white rounded-xl shadow-md border-2 border-red-300">
           <View className="bg-red-900 p-4 rounded-t-xl">
             <View className="flex-row items-center">
@@ -201,11 +206,25 @@ const TentangKami = ({ setActiveSection }: TentangKamiProps) => {
           <View className="p-5 bg-red-50">
             <View className="bg-white p-4 rounded-lg border-2 border-red-200 mb-3">
               <Text className="text-red-900 text-base leading-6 font-semibold mb-2">
-                Buddhayana Digital
+                Ajm Digital
               </Text>
               <Text className="text-red-800 text-sm leading-6">
-                Lahir dari kebutuhan akan akses yang mudah dan modern terhadap praktik spiritual Buddha di era digital.
+                Aplikasi digital ini berisi edukasi Buddhis dan praktik latihan Dharma harian untuk Sangha dan umat Buddha.
               </Text>
+            </View>
+            
+            <View className="bg-red-100 p-4 rounded-lg border-2 border-red-300 mb-3">
+              <View className="flex-row items-start">
+                <View className="bg-red-200 p-2 rounded-full mr-3">
+                  <FontAwesome5 name="user-tie" size={14} color="#7f1d1d" />
+                </View>
+                <View className="flex-1">
+                  <Text className="text-red-900 font-bold text-sm mb-1">Pembimbing Spiritual</Text>
+                  <Text className="text-red-800 text-sm leading-5">
+                    Y.M. Nyanasila, Thera. adalah bhikkhu yang merupakan anggota Sangha Agung Indonesia. Beliau tinggal di Wihara Tantular Sugata Wilwatikta &quot;Buddhayana Center Mojokerto&quot;.
+                  </Text>
+                </View>
+              </View>
             </View>
             
             <Text className="text-red-800 text-sm leading-6 mb-3">
@@ -223,7 +242,44 @@ const TentangKami = ({ setActiveSection }: TentangKamiProps) => {
           </View>
         </View>
 
-        {/* Kontak - DIUBAH: tema gold dengan border */}
+        {/* Wihara & Lembaga yang Dibina */}
+        <View className="mx-4 mb-4 bg-white rounded-xl shadow-md border-2 border-yellow-300">
+          <View className="bg-yellow-600 p-4 rounded-t-xl">
+            <View className="flex-row items-center">
+              <View className="bg-yellow-500 p-2 rounded-full mr-3">
+                <FontAwesome5 name="spa" size={18} color="white" />
+              </View>
+              <Text className="text-white font-bold text-lg">Wihara & Lembaga yang Dibina</Text>
+            </View>
+          </View>
+
+          <View className="p-5 bg-amber-50">
+            <View className="bg-white p-4 rounded-lg border-2 border-yellow-200">
+              <View className="space-y-2">
+                {[
+                  'Yayasan Agga Jina Mitto',
+                  'Wihara Tantular Sugata Wilwatikta "Buddhayana Center Mojokerto"',
+                  'Padepokan Meditasi Buddhayana, Gunung Lorokan, Mojokerto',
+                  'Lembaga Pendidikan Pariyapunati Indonesia',
+                  'Buddhayana Center Bali',
+                  'Cetiya Amitabha Bali',
+                  'Wihara Mahamanggala Boyolali'
+                ].map((lembaga, index) => (
+                  <View key={index} className="flex-row items-start mb-2">
+                    <View className="bg-yellow-500 w-5 h-5 rounded-full items-center justify-center mr-2 mt-0.5">
+                      <Text className="text-white text-xs font-bold">{index + 1}</Text>
+                    </View>
+                    <Text className="text-yellow-800 text-sm flex-1 leading-5">
+                      {lembaga}
+                    </Text>
+                  </View>
+                ))}
+              </View>
+            </View>
+          </View>
+        </View>
+
+        {/* Kontak */}
         <View className="mx-4 mb-4 bg-white rounded-xl shadow-md border-2 border-yellow-300">
           <View className="bg-red-900 p-4 rounded-t-xl">
             <View className="flex-row items-center">
